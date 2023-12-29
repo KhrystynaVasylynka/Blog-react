@@ -5,9 +5,10 @@ import Container from '@mui/material/Container'
 import Logo from 'components/Logo/Logo'
 import HeaderMenu from './HeaderMenu'
 
-type Props = {}
-
-const Header = (props: Props) => {
+type Props = {
+   
+  };
+  const Header= (props: Props) => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar
@@ -26,6 +27,7 @@ const Header = (props: Props) => {
                     >
                         <Logo />
                         <HeaderMenu />
+                       
                     </Toolbar>
                 </Container>
             </AppBar>
