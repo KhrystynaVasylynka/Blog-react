@@ -4,13 +4,21 @@ import Slider from 'components/Slider/Slider';
 import HomeArticles from 'components/article/HomeArticles';
 
 
-
-
 type Props = {
- 
+  likeState: {
+    [id: number]: boolean;
+  };
+  changeLikeArticle(id: number, like: boolean): void;
+  updateLikedState(hasLiked: boolean): void;
+  likedCount: number;
 };
 
-const Home = (props: Props) => {
+const Home = ({
+  likeState,
+  changeLikeArticle,
+  updateLikedState,
+  likedCount,
+}: Props) => {
 
   return (
     <>
@@ -21,6 +29,10 @@ const Home = (props: Props) => {
         }}
       >
         <HomeArticles
+           likeState={likeState}
+           changeLikeArticle={changeLikeArticle}
+           updateLikedState={updateLikedState}
+           likedCount={likedCount}
         />
        
       </Container>

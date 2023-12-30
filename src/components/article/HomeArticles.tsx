@@ -4,12 +4,23 @@ import HomeArticleItem from './HomeArticleItem';
 
 
 type Props = {
+  likeState: {
+    [id: number]: boolean;
+  };
+  changeLikeArticle(id: number, like: boolean): void;
+  updateLikedState(hasLiked: boolean): void;
+  likedCount: number;
 
 };
 
 
 
-const HomeArticles = (Props: Props) => {
+const HomeArticles = ({
+  likeState,
+  changeLikeArticle,
+  updateLikedState,
+  likedCount,
+}: Props) => {
   return (
     <Container>
       <Grid container spacing={3} sx={{ paddingTop: '0px!important' }}>
@@ -64,7 +75,11 @@ const HomeArticles = (Props: Props) => {
                   author={author}
                   title={title}
                   description={description}
+                  isLiked={likeState[id]}
                   id={id}
+                  changeLikeArticle={changeLikeArticle}
+                  updateLikedState={updateLikedState}
+                  likedCount={likedCount}
                 />
               )
             )}

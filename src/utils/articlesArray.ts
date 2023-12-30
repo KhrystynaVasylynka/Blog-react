@@ -7,16 +7,14 @@ export type HomeArticleItemType = {
   date: string;
   title: string;
   description: string;
-  inSidebar: string;
   full?: string;
 };
 
 export const articlesArray: HomeArticleItemType[] = [
   {
     id: 1,
-    inSidebar: 'no',
     alt: 'article 1',
-    imageUrl: '/public/images/b1_105928f8-73d2-4eb3-a3bc-0662a0138bc1_600x.webp',
+    imageUrl: '/images/b1_105928f8-73d2-4eb3-a3bc-0662a0138bc1_600x.webp',
     category: 'Fashion',
     date: 'Oct 12, 2023',
     author: 'Charlie Teather',
@@ -143,214 +141,58 @@ export const articlesArray: HomeArticleItemType[] = [
   },
   {
     id: 2,
-    inSidebar: 'yes',
     alt: 'article 2',
-    imageUrl: '/public/images/b2_600x.webp',
-    category: 'Health',
-    date: 'Oct 15, 2023',
-    author: 'Pete McCall',
-    title: 'The Benefits of Exercise on Mental Health',
+    imageUrl: '/images/b2_600x.webp',
+    category: 'Beauty',
+    date: 'Dec 20, 2017',
+    author: 'Ram M',
+    title: 'MINIMALISM IN JEWELRY!',
     description:
-      'If you’ve been contemplating becoming more physically active, it’s important to recognize that regular exercise can not only help you look better...',
+      'Cames cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...',
 
     full: ` <div>
   <p>
   
-    If you’ve been contemplating becoming more physically active, it’s
-    important to recognize that regular exercise can not only help you
-    look better, it can help you feel better, too. Here are six ways
-    exercise can help improve your overall mental health and outlook.
+  Cames cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+  “Ridiculus mus mauris vitae ultricies leo. Non enim praesent elementum facilisis leo vel fringilla. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada.”
+  
+  Sapien faucibus et molestie ac feugiat sed lectus. Sit amet consectetur adipiscing elit. Sed cras ornare arcu dui vivamus arcu felis. A scelerisque purus semper eget duis at tellus at urna. Vitae congue mauris rhoncus aenean vel elit. Sapien faucibus et molestie ac feugiat. 
+  
+  Id semper risus in hendrerit gravida rutrum quisque non tellus. Sed lectus vestibulum mattis ullamcorper. Amet venenatis urna cursus eget nunc. Eu augue ut lectus arcu. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Amet venenatis urna cursus eget nunc.
+  
+  Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus elementum sagittis vitae. Massa sapien faucibus et molestie ac feugiat. Tincidunt ornare massa eget egestas purus viverra accumsan. Metus aliquam eleifend mi in nulla posuere. 
   </p>
-  <ul>
-    <li>
-      Exercise increases the production of brain-derived neurotrophic
-      factor (BDNF), a neurotransmitter that can stimulate production of
-      new brain cells. Both cardiorespiratory and muscular training can
-      help elevate levels of BDNF, which means that these forms of
-      exercise not only help you become more physically fit, but they
-      can also boost your brain health.
-    </li>
-    <li>
-      Exercise improves memory and learning and reduces or slows
-      progressive loss to brain cell structure and function. In
-      addition, exercise improves brain health by enhancing its ability
-      to grow and adapt in response to stimuli (neuroplasticity) by
-      reorganizing its connections, structure and functions. In other
-      words, exercise may ameliorate some of the inescapable
-      brain-related changes that occur with aging. Improvements in
-      cognitive function and neuroplasticity can be observed in both
-      young and old and both healthy and clinical populations. While
-      cardiorespiratory and muscular training create unique
-      neurophysiological adaptations, the combination of both types of
-      exercise leads to more exercise-induced neuroplasticity than
-      either mode alone. In other words, different types of exercise
-      improves brain health by targeting various aspects of brain
-      function.
-    </li>
-    <li>
-      Exercise can help boost self-esteem, which may positively affect
-      your mental health. Learning how to perfect that yoga pose,
-      finally doing a pull-up with your own body weight or lifting a
-      certain amount of weight for the first time can leave you with the
-      feeling that you can achieve specific tasks that you set out to
-      accomplish, which is one of the best ways to boost self-esteem.
-    </li>
-    <li>
-      How awesome do you feel after a good night’s sleep? Sleep is when
-      your body repairs itself after the challenges of the day and is an
-      important component of good mental health. A good night’s sleep is
-      also critical for your brain to recharge and refresh, and regular
-      exercise can enhance your quality of sleep, which can leave you
-      feeling great all day long.
-    </li>
-    <li>
-      In this non-stop world, where you’re constantly being texted,
-      emailed and generally pulled in all directions, having the
-      opportunity to take time out of your day to focus on you may help
-      improve mental health. Time spent exercising is an opportunity to
-      unplug from other people and listen to your favorite music or
-      catch up on your favorite hobby via a podcast. This, in turn, can
-      help you change how you feel and improve your overall outlook.
-    </li>
-    <li>
-      Taking group fitness classes or simply being at a gym surrounded
-      by other people working toward improving their health can help you
-      connect with others, which is an important component of good
-      mental health. If you’re new to an area or going through a major
-      life change such as a break-up, your workout time can be the best
-      opportunity for meeting new people and making new friends. Many
-      fitness studios and group classes become mini-communities and are
-      an excellent way to improve your real-life social network, which
-      can have an immediate impact on your mental health.
-    </li>
-  </ul>
-  <p>
-    Research strongly suggests that improved mental health is an
-    important and often-overlooked outcome of regular exercise. It’s
-    also important to note that you don’t need to pay for an expensive
-    health membership or fitness classes to receive the mental health
-    benefits of exercise. If your clients or participants have been
-    looking for a little extra motivation to get moving, let them know
-    that exercise can help them feel better and improve their overall
-    outlook on life.
-  </p>
+ 
 </div>`,
   },
   {
     id: 3,
-    inSidebar: 'no',
     alt: 'article 3',
-    imageUrl: '/public/images/b3_600x.webp',
-    category: 'Health',
+    imageUrl: '/images/b3_600x.webp',
+    category: 'Hair care',
     date: 'Sep 04, 2023',
     author: 'Daniel J. Green',
-    title: 'Selfcare and Stress Management',
+    title: 'THE SAUNA BATH AT THE SPA',
     description:
-      'Developing positive self-care habits can help people better manage their stress and improve their overall well-being. Here, we’ll explore the importance of mindfulness...',
+      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
     full: `<div>
   <p>
-    Developing positive self-care habits can help you and your clients
-    to better manage stress and improve overall well-being. So, what is
-    self-care? Stated simply, self-care is the practice of taking action
-    to preserve or improve your own health. It can come in countless
-    forms, from meditation and yoga practice to physical activity or
-    even carving out time to read a good book. Here, we’ll explore the
-    importance of mindfulness, sleep and social connectedness to stress
-    reduction and offer some strategies for you to put into practice or
-    share with your clients—or both.
-  </p>
-  <h2>Practice Mindfulness</h2>
-  <p>
-    Mindfulness practices may offer a host of physical, psychological
-    and social benefits that can lead to decreases in perceived stress,
-    improved self-efficacy, enhanced emotional regulation and a greater
-    sense of meaning and purpose in life.
-  </p>
-  <p>
-    Relaxation counters the short-term effects of stress by decreasing
-    blood pressure, heart rate, respiration rate and muscle tension.
-    Over the long-term, relaxation can mitigate certain health issues,
-    including hypertension, anxiety and even cancer, in addition to
-    improving overall health and healing.
-  </p>
-  <p>
-    Here are some mindful practices that you and your clients might want
-    to try:
-  </p>
-  <ul>
-    <li>
-      Mindful movement, such as yoga, tai chi, qigong, walking or
-      cycling: Your clients might be surprised to learn that one of the
-      two common aspects of practices that elicit relaxation is
-      repetition, as is experienced during exercises like walking and
-      cycling.
-    </li>
-    <li>
-      Meditation: This can include any of a number of types of
-      meditation, which you may encourage your clients to research.
-      While some people thrive with an ongoing transcendental meditation
-      practice, others may simply want a way to get 10 or 15 minutes of
-      quiet time or prayer during a stressful period. This is where the
-      second aspect of practices that elicit relaxation comes in—a
-      passive disregard of thoughts as they arise.
-    </li>
-    <li>
-      Breathing exercises: Again, there are a number of breathing
-      exercises that clients can explore, including diaphragmatic
-      breathing and pursed-lip breathing. Check out these 6 Breathing
-      Exercises to Reduce Stress.
-    </li>
-  </ul>
-  <p>
-    If you want to learn more about the connection between breathing
-    practices and meditation, check out this video from ACE expert
-    Carrie Myers: Breath and Meditation.
-  </p>
-  <h2>Sleep</h2>
-  <p>
-    Sleep disordersare common in modern society, with one in three U.S.
-    adults reporting that they usually get less than the recommended
-    amount of sleep. Improving sleep patterns can be part of every
-    healthy behavior-change program. Sleep deficiency has been linked to
-    a variety of chronic health risks, including heart disease, obesity,
-    high blood pressure, diabetes and depression.
-  </p>
-  <p>
-    Share the following tips with your clients to help them get a good
-    night’s sleep:
-  </p>
-  <ul>
-    <li> Create a relaxing sleep environment. </li>
-    <li>Follow a consistent sleep schedule. </li>
-    <li>Follow a soothing bedtime routine.</li>
-    <li>Limit exposure to bright light, especially blue light.</li>
-    <li>Try to be exposed to natural light early in the day. </li>
-    <li>Exercise daily.</li>
-    <li>Avoid caffeine and alcohol.</li>
-    <li>Avoid eating a large meal too close to bedtime.</li>
-  </ul>
-  <h3>Social Connectedness</h3>
-  <p>
-    The importance of social connectedness cannot be overstated.
-    According to the Centers for Disease Control and Prevention, “Social
-    connectedness influences our minds, bodies, and behaviors—all of
-    which influence our health and life expectancy.”
-  </p>
-  <p>
-    As a health coach or exercise professional, one of the best things
-    you can do to help alleviate a client’s feelings of loneliness,
-    anxiousness or depression is to provide a positive experience each
-    time you interact with them. Also, encourage your clients to find
-    workout partners, join healthy cooking classes or simply get out and
-    hang out with friends.
-  </p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+“Ridiculus mus mauris vitae ultricies leo. Non enim praesent elementum facilisis leo vel fringilla. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada.”
+
+Sapien faucibus et molestie ac feugiat sed lectus. Sit amet consectetur adipiscing elit. Sed cras ornare arcu dui vivamus arcu felis. A scelerisque purus semper eget duis at tellus at urna. Vitae congue mauris rhoncus aenean vel elit. Sapien faucibus et molestie ac feugiat. 
+
+Id semper risus in hendrerit gravida rutrum quisque non tellus. Sed lectus vestibulum mattis ullamcorper. Amet venenatis urna cursus eget nunc. Eu augue ut lectus arcu. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Amet venenatis urna cursus eget nunc.
+
+Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus elementum sagittis vitae. Massa sapien faucibus et molestie ac feugiat. Tincidunt ornare massa eget egestas purus viverra accumsan. Metus aliquam eleifend mi in nulla posuer
 </div>`,
   },
   {
     id: 4,
-    inSidebar: 'no',
     alt: 'article 4',
-    imageUrl: '/public/images/b4_600x.webp',
+    imageUrl: '/images/b4_600x.webp',
     category: 'Astrology',
     date: 'Jan 19, 2023',
     author: 'Ragnar Malento',
@@ -479,9 +321,8 @@ export const articlesArray: HomeArticleItemType[] = [
   },
   {
     id: 5,
-    inSidebar: 'no',
     alt: 'article 5',
-    imageUrl: '/public/images/b5_600x.webp',
+    imageUrl: '/images/b5_600x.webp',
     category: 'Psychology',
     date: 'Aug 15, 2023',
     author: 'Melissa Madeson',
@@ -621,9 +462,8 @@ export const articlesArray: HomeArticleItemType[] = [
   },
   {
     id: 6,
-    inSidebar: 'yes',
     alt: 'article 6',
-    imageUrl: '/public/images/b6_600x.webp',
+    imageUrl: '/images/b6_600x.webp',
     category: 'Fashion',
     date: 'Oct 19, 2023',
     author: 'Londi Ncube',
@@ -706,9 +546,8 @@ export const articlesArray: HomeArticleItemType[] = [
   },
   {
     id: 7,
-    inSidebar: 'no',
     alt: 'article 7',
-    imageUrl: '/public/images/b7_600x.webp',
+    imageUrl: '/images/b7_600x.webp',
     category: 'Psychology',
     date: 'Jun 29, 2023',
     author: 'Pete McCall ',
@@ -829,244 +668,56 @@ export const articlesArray: HomeArticleItemType[] = [
   },
   {
     id: 8,
-    inSidebar: 'yes',
     alt: 'article 8',
-    imageUrl: '/public/images/b8_600x.webp',
-    category: 'Health',
+    imageUrl: '/images/b8_600x.webp',
+    category: 'Cosmetics',
     date: 'Mach 02, 2023',
     author: 'Nancy Clark',
-    title: 'Why Carbohydrates So Confusing For Us',
+    title: 'THE SHADES OF LIPSTICK',
     description:
-      'Carbohydrates can be a source of confusion for athletes and fitness enthusiasts alike, many of whom believe they should avoid pasta, bagels,juice, bananas, sugar...?',
+      ' Pris sed aliquam nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci....?',
     full: `    <div>
   <p>
-    Carbohydrates can be a source of confusion for athletes and fitness
-    enthusiasts alike, many of whom believe they should avoid pasta,
-    bagels, juice, bananas, sugar... the list goes on. In reality,
-    people who are physically inactive whose bodies do not readily
-    metabolize carbohydrates may need to take a different approach to
-    consuming carbohydrates compared to regular exercisers and athletes.
-    Here’s some information to help resolve carbohydrate confusion.
-  </p>
-  <h2>What do you actually mean when you say “carbs”?</h2>
-  <p>
-    Carbohydrates include both sugars and starches; they are
-    biochemically similar. For example, an unripe banana (or any fruit)
-    is starchy. As it ripens, it becomes sweeter; the starch converts
-    into sugar. In comparison, peas (and other vegetables) are sweet
-    when young and their sugar converts into starch as they mature. All
-    forms of sugar and starch digest into the simple sugar glucose.
-    Glucose travels in the blood and, with the help of insulin, is taken
-    up for fuel by the muscles to fuel your workouts. Fit bodies handle
-    carbohydrates better than unfit bodies.
-  </p>
-  <h2>Are carbs bad for you?</h2>
-  <p>
-    Regarding health, some carbs are better for you than others because
-    some offer more nutrients than others. Even though refined sugar
-    adds “empty calories” to a sports diet, you need not eat a
-    sugar-free diet to have a healthy diet. A physically fit, healthy
-    person’s menu can accommodate 10% of calories from refined sugar
-    (World Health Organization’s guidelines). Yet, if you frequently
-    consume sweets plus sports drinks, gels, and sports candies, you can
-    easily consume more than 250 to 350 calories (10% of calories) from
-    refined sugar. The fear-mongering terms of unhealthy, toxic, and
-    poisonous that surround conversations regarding carbohydrates are
-    simply unscientific. People who lack knowledge about physiology
-    accept this disease-mongering, anti-sugar rhetoric. But the fact is
-    no one food is healthy or unhealthy.
-  </p>
-  <h2>Are carbs fattening?</h2>
-  <p>
-    Despite popular belief, carbohydrates are not inherently fattening.
-    Excess calories are fattening.
-  </p>
-  <h2>What about high-fructose corn syrup?</h2>
-  <p>
-    High-fructose corn syrup (HFCS) is less evil than is often portrayed
-    by the media. HFCS is a double molecule comprised of 45% glucose,
-    55% fructose—the same as honey and similar to white sugar (50%
-    glucose, 50% fructose). The negative hype about HFCS applies
-    primarily to people who consume excessive calories of sweets, soda,
-    candies, and processed foods sweetened with HFCS. While no one needs
-    excessive, lack-luster calories that could be better spent on
-    nutrient-rich fruits, veggies, and whole grains, does an athlete
-    really need to fret about a few calories of HFCS in ketchup?
-  </p>
-  <h2>What about sugar “crashes”?</h2>
-  <p>
-    The most common reason for “sugar crashes” (hypoglycemia) among
-    athletes relates to running out of fuel. The shakiness and sweats
-    are because the athlete did not eat enough food to maintain normal
-    blood glucose levels, and the brain is now demanding sugar. One
-    marathoner, who thought the 100-calorie gel he consumed at mile 16
-    caused him to “crash,” more likely needed 200 to 300 calories to
-    meet his energy needs. A sharp rise in blood sugar that may occur
-    after eating sugary foods is not pathological and has more to do
-    with the efficiency of the muscles and liver in their ability to
-    take up the sugar. Exercise enhances the transport of sugar from
-    your blood into your muscles with far less insulin than needed by
-    the body of a person who is physically inactive.
-  </p>
-  <h2>Summary</h2>
-  <p>
-    For physically active, fit people who are at lower risk for heart
-    disease, diabetes, and obesity, sugar and carbs are not toxic and
-    may be a helpful way to enhance athletic performance. The
-    one-size-diet does not fit all. No one is suggesting that you or
-    your clients should eat more sugar, but rather understand that
-    athletes and people who are regularly physically active can embrace
-    a way of eating that includes an appropriate balance of carbohydrate
-    (sugars and starches) in each meal. Strive for a healthy eating
-    pattern that includes 85-90% quality foods and 10-15% whatever. Some
-    days, whatever might be an apple; other days, it might be a slice of
-    apple pie.
+  Pris sed aliquam nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed posuere ac mattis non nunc. 
+
+  “Ridiculus mus mauris vitae ultricies leo. Non enim praesent elementum facilisis leo vel fringilla. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada.”
+  
+  Sapien faucibus et molestie ac feugiat sed lectus. Sit amet consectetur adipiscing elit. Sed cras ornare arcu dui vivamus arcu felis. A scelerisque purus semper eget duis at tellus at urna. Vitae congue mauris rhoncus aenean vel elit. Sapien faucibus et molestie ac feugiat. 
+  
+  Id semper risus in hendrerit gravida rutrum quisque non tellus. Sed lectus vestibulum mattis ullamcorper. Amet venenatis urna cursus eget nunc. Eu augue ut lectus arcu. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Amet venenatis urna cursus eget nunc.
+  
+  Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus elementum sagittis vitae. Massa sapien faucibus et molestie ac feugiat. Tincidunt ornare massa eget egestas purus viverra accumsan. Metus aliquam eleifend mi in nulla posuere. 
   </p>
 </div>`,
   },
   {
     id: 9,
-    inSidebar: 'no',
     alt: 'article 9',
-    imageUrl: '/public/images/b9_600x.webp',
-    category: 'Astrology',
+    imageUrl: '/images/b9_600x.webp',
+    category: 'Beauty',
     date: 'Mach 03, 2023',
     author: 'Ayanika Das',
-    title: 'Signs Your Closest Friend Might Be Your Perfect Life Partner',
+    title: 'THE SOFT PETALS OF THE ROSES',
     description:
-      'You’ve known your best friend for years. You share secrets, dreams, and countless laughter. You’ve always appreciated their presence in your life, but...?',
+      'Pris sed aliquam nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit...?',
     full: ` <div>
   <p>
-    You’ve known your best friend for years. You share secrets, dreams,
-    and countless laughter. You’ve always appreciated their presence in
-    your life, but have you ever wondered if they could be your perfect
-    life partner? This blog explores how astrology can help you uncover
-    the signs that your closest friend might just be the one you’ve been
-    looking for.
-  </p>
-  <ol>
-    <li>
-      <h2>Cosmic Compatibility</h2>
-      <p>
-        Astrology, the ancient science of the stars, can offer insights
-        into your compatibility with someone. When two people are close
-        friends and their astrological signs align, it’s a powerful sign
-        that they may be perfect life partners. Whether it’s your sun,
-        moon, or rising sign, astrology can reveal if your cosmic
-        energies are in sync.
-      </p>
-    </li>
-    <li>
-      <h2>Shared Goals and Dreams</h2>
-      <p>
-        One of the most significant indicators of a potential life
-        partner is the alignment of your long-term goals and dreams.
-        Your closest friend may share similar aspirations, making it
-        easier to navigate the complexities of life together. It’s like
-        two puzzle pieces that fit perfectly.
-      </p>
-    </li>
-    <li>
-      <h2> Emotional Connection</h2>
-      <p>
-        A deep emotional connection is a vital element of any romantic
-        relationship. If your closest friend provides you with
-        unwavering support, understands your moods, and is your go-to
-        person during tough times, they might just be your perfect life
-        partner in the making.
-      </p>
-    </li>
-    <li>
-      <h2>Communication is Effortless</h2>
-      <p>
-        In any successful relationship, communication is key. If you and
-        your closest friend can have meaningful conversations without
-        any struggle, it’s a good indication that you have a strong
-        foundation for a deeper, more intimate connection.
-      </p>
-    </li>
-    <li>
-      <h2>You Share Hobbies and Interests</h2>
-      <p>
-        Shared interests can strengthen a bond between two people. If
-        you and your best friend enjoy the same hobbies, activities, or
-        passions, it can create a sense of unity and compatibility that
-        extends beyond friendship.
-      </p>
-    </li>
-    <li>
-      <h2>You’re Supportive of Each Other’s Growth</h2>
-      <p>
-        Partners who genuinely care about each other’s personal growth
-        and well-being are more likely to have a successful life
-        partnership. If your closest friend encourages your
-        self-improvement and vice versa, it’s a sign that they may be
-        your perfect life partner.
-      </p>
-    </li>
-    <li>
-      <h2> You’re Each Other’s Confidants</h2>
-      <p>
-        Close friends often serve as confidants, but if your friend is
-        the first person you turn to with your joys and sorrows, it
-        could be a sign of a deeper connection waiting to blossom.
-      </p>
-    </li>
-    <li>
-      <h2>Unspoken Understanding</h2>
-      <p>
-        Sometimes, you and your closest friend may have an unspoken
-        understanding of each other’s needs and desires. This unspoken
-        connection could be the foundation of a lasting and fulfilling
-        romantic partnership.
-      </p>
-    </li>
-  </ol>
-  <h2>Astrological Insights:</h2>
-  <p>
-    Astrology can provide valuable guidance in identifying these signs.
-    Here are a few astrological aspects to consider:
-  </p>
-  <ul>
-    <li>
-      <b> Sun Signs:</b> Compatibility between your sun signs can reveal
-      your basic personality traits and how well they mesh.
-    </li>
-    <li>
-      <b> Moon Signs: </b>These indicate your emotional needs and how
-      they align with your friend’s.
-    </li>
-    <li>
-      <b> Venus Signs:</b> Venus represents love and attraction. Check
-      how your Venus signs interact.
-    </li>
-    <li>
-      <b> Rising Signs:</b> Your rising signs show how you present
-      yourself to the world. Complementing rising signs can lead to a
-      more harmonious relationship.
-    </li>
-  </ul>
-  <p>
-    In summary, the signs that your closest friend might be your perfect
-    life partner go beyond ordinary friendship. Astrology can shed light
-    on your compatibility and potential for a fulfilling romantic
-    relationship. If you find a strong alignment in the astrological
-    aspects mentioned above, it’s worth exploring the idea of taking
-    your relationship to the next level. Your best friend could be your
-    perfect life partner in the stars.
-  </p>
-  <p>
-    So, take a moment to reflect on your closest friendship and consult
-    the cosmos for guidance. It might just lead you to the perfect life
-    partner you’ve been seeking all along.
-  </p>
+  Pris sed aliquam nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed posuere ac mattis non nunc. 
+
+  “Ridiculus mus mauris vitae ultricies leo. Non enim praesent elementum facilisis leo vel fringilla. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada.”
+  
+  Sapien faucibus et molestie ac feugiat sed lectus. Sit amet consectetur adipiscing elit. Sed cras ornare arcu dui vivamus arcu felis. A scelerisque purus semper eget duis at tellus at urna. Vitae congue mauris rhoncus aenean vel elit. Sapien faucibus et molestie ac feugiat. 
+  
+  Id semper risus in hendrerit gravida rutrum quisque non tellus. Sed lectus vestibulum mattis ullamcorper. Amet venenatis urna cursus eget nunc. Eu augue ut lectus arcu. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Amet venenatis urna cursus eget nunc.
+  
+  Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus elementum sagittis vitae. Massa sapien faucibus et molestie ac feugiat. Tincidunt ornare massa eget egestas purus viverra accumsan. Metus aliquam eleifend mi in nulla posuere.
+   </p>
 </div>`,
   },
   {
     id: 10,
-    inSidebar: 'no',
     alt: 'article 10',
-    imageUrl: '/public/images/b12_70d30ad7-cd54-43bc-8550-37790c3cf87c_600x.webp',
+    imageUrl: '/images/b12_70d30ad7-cd54-43bc-8550-37790c3cf87c_600x.webp',
     category: 'Fashion',
     date: 'Oct 27, 2023',
     author: 'Elle Turner',

@@ -6,15 +6,16 @@ import Logo from 'components/Logo/Logo'
 import HeaderMenu from './HeaderMenu'
 
 type Props = {
-   
+    hasLikedArticles: boolean;
+    likedCount: number;
   };
-  const Header= (props: Props) => {
+  const Header: React.FC<Props> = ({ hasLikedArticles, likedCount }) => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar
                 position="sticky"
                 sx={{
-                    backgroundColor: 'rgba(255, 218, 185,0.2)',
+                    backgroundColor: 'rgba(255, 218, 185,0.5)',
                 }}
             >
                 <Container maxWidth="lg">
@@ -26,7 +27,9 @@ type Props = {
                         }}
                     >
                         <Logo />
-                        <HeaderMenu />
+                        <HeaderMenu
+                          hasLikedArticles={hasLikedArticles}
+                          likedCount={likedCount}/>
                        
                     </Toolbar>
                 </Container>

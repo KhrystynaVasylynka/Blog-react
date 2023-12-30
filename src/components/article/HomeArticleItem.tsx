@@ -1,6 +1,6 @@
 import classes from './HomeArticle.module.scss';
 import { Box, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import LikeButton from 'components/UI/LikeButton';
 
 
 type HomeArticleItemType = {
@@ -12,9 +12,13 @@ type HomeArticleItemType = {
   date: string;
   title: string;
   description: string;
- 
- 
+  isLiked: boolean;
+  likedCount: number;
+  changeLikeArticle(id: number, like: boolean): void;
+  updateLikedState(hasLiked: boolean): void;
 };
+ 
+
 
 const HomeArticleItem = ({
   id,
@@ -25,7 +29,10 @@ const HomeArticleItem = ({
   date,
   title,
   description,
- 
+  isLiked,
+  changeLikeArticle,
+  updateLikedState,
+  likedCount,
 }: HomeArticleItemType) => {
   return (
     <Box
@@ -42,15 +49,7 @@ const HomeArticleItem = ({
       <span className={classes.category}>
         {category}
       </span>
-      <Link
-        to={`/${category.toLowerCase()}/${title
-          .toLowerCase()
-          .replace(/ /g, '-')}`}
-        className={classes.title}
-      
-      >
-        {title}
-      </Link>
+      <a  className={classes.title} href="#"> {title}</a>
       <Box
         sx={{
           display: 'flex',
@@ -65,16 +64,19 @@ const HomeArticleItem = ({
         >
           {date} | by {author}
         </Typography>
+        <LikeButton
+          key={id}
+          isLiked={isLiked}
+          id={id}
+          changeLikeArticle={changeLikeArticle}
+          updateLikedState={updateLikedState}
+          likedCount={likedCount}
+        />
       </Box>
 
       <Typography> {description}</Typography>
-      <Link
-        to={`/${category}/${title.toLowerCase().replace(/ /g, '-')}`}
-        className={classes.readMore}
-       
-      >
-        Read more
-      </Link>
+      <a className={classes.readMore}
+       href="#"> Read more</a>
     </Box>
   );
 };

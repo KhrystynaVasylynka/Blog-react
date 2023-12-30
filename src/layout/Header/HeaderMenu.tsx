@@ -1,15 +1,18 @@
 import { useState } from 'react'
-import { Tabs, Tab, Drawer, List, ListItem, ListItemText } from '@mui/material'
+import { Tabs, Tab, Typography, Drawer, List, ListItem, ListItemText } from '@mui/material'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import MenuIcon from '@mui/icons-material/Menu'
 import { NavLink} from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
-import classes from './Header.module.scss'
 
-type Props = {}
 
-const HeaderMenu = (props: Props) => {
+
+type Props = {
+    hasLikedArticles: boolean;
+    likedCount: number;
+  };
+  
+  const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
     const [isDrawerOpen, setDrawerOpen] = useState<boolean>(false)
     const toggleDrawer = (open: boolean) => () => {
         setDrawerOpen(open)
@@ -68,8 +71,23 @@ const HeaderMenu = (props: Props) => {
                         display: { xs: 'none', lg: 'flex' },
                     }}
                     label="Favorites"
-                    icon={<FavoriteBorderIcon />}
-            iconPosition="end"
+                    icon={
+                      hasLikedArticles ? (
+                        <>
+                          <FavoriteIcon sx={{ color: 'red', marginLeft: '10px' }} />
+                          <Typography
+                            variant="caption"
+                            sx={{ fontSize: '18px', color: '#1976d2' }}
+                          >
+                            {' '}
+                            {likedCount}
+                          </Typography>
+                        </>
+                      ) : (
+                        <FavoriteBorderIcon />
+                      )
+                    }
+                    iconPosition="end"
             
                 />
             </Tabs>
