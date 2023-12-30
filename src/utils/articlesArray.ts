@@ -1,14 +1,4 @@
-import article1 from '../assets/img/b1_105928f8-73d2-4eb3-a3bc-0662a0138bc1_600x.webp';
-import article2 from '../assets/img/b2_600x.webp';
-import article3 from '../assets/img/b3_600x.webp';
-import article4 from '../assets/img/b4_600x.webp';
-import article5 from '../assets/img/b5_600x.webp';
-import article6 from '../assets/img/b6_600x.webp';
-import article7 from '../assets/img/b7_600x.webp';
-import article8 from '../assets/img/b8_600x.webp';
-import article9 from '../assets/img/b9_600x.webp';
-
-export type ArticleData = {
+export type HomeArticleItemType = {
   id: number;
   imageUrl: string;
   author: string;
@@ -21,12 +11,12 @@ export type ArticleData = {
   full?: string;
 };
 
-export const articlesArray: ArticleData[] = [
+export const articlesArray: HomeArticleItemType[] = [
   {
     id: 1,
     inSidebar: 'no',
     alt: 'article 1',
-    imageUrl: article1,
+    imageUrl: '/public/images/b1_105928f8-73d2-4eb3-a3bc-0662a0138bc1_600x.webp',
     category: 'Fashion',
     date: 'Oct 12, 2023',
     author: 'Charlie Teather',
@@ -155,7 +145,7 @@ export const articlesArray: ArticleData[] = [
     id: 2,
     inSidebar: 'yes',
     alt: 'article 2',
-    imageUrl: article2,
+    imageUrl: '/public/images/b2_600x.webp',
     category: 'Health',
     date: 'Oct 15, 2023',
     author: 'Pete McCall',
@@ -250,7 +240,7 @@ export const articlesArray: ArticleData[] = [
     id: 3,
     inSidebar: 'no',
     alt: 'article 3',
-    imageUrl: article3,
+    imageUrl: '/public/images/b3_600x.webp',
     category: 'Health',
     date: 'Sep 04, 2023',
     author: 'Daniel J. Green',
@@ -360,7 +350,7 @@ export const articlesArray: ArticleData[] = [
     id: 4,
     inSidebar: 'no',
     alt: 'article 4',
-    imageUrl: article4,
+    imageUrl: '/public/images/b4_600x.webp',
     category: 'Astrology',
     date: 'Jan 19, 2023',
     author: 'Ragnar Malento',
@@ -491,7 +481,7 @@ export const articlesArray: ArticleData[] = [
     id: 5,
     inSidebar: 'no',
     alt: 'article 5',
-    imageUrl: article5,
+    imageUrl: '/public/images/b5_600x.webp',
     category: 'Psychology',
     date: 'Aug 15, 2023',
     author: 'Melissa Madeson',
@@ -633,7 +623,7 @@ export const articlesArray: ArticleData[] = [
     id: 6,
     inSidebar: 'yes',
     alt: 'article 6',
-    imageUrl: article6,
+    imageUrl: '/public/images/b6_600x.webp',
     category: 'Fashion',
     date: 'Oct 19, 2023',
     author: 'Londi Ncube',
@@ -718,7 +708,7 @@ export const articlesArray: ArticleData[] = [
     id: 7,
     inSidebar: 'no',
     alt: 'article 7',
-    imageUrl: article7,
+    imageUrl: '/public/images/b7_600x.webp',
     category: 'Psychology',
     date: 'Jun 29, 2023',
     author: 'Pete McCall ',
@@ -841,7 +831,7 @@ export const articlesArray: ArticleData[] = [
     id: 8,
     inSidebar: 'yes',
     alt: 'article 8',
-    imageUrl: article8,
+    imageUrl: '/public/images/b8_600x.webp',
     category: 'Health',
     date: 'Mach 02, 2023',
     author: 'Nancy Clark',
@@ -938,7 +928,7 @@ export const articlesArray: ArticleData[] = [
     id: 9,
     inSidebar: 'no',
     alt: 'article 9',
-    imageUrl: article9,
+    imageUrl: '/public/images/b9_600x.webp',
     category: 'Astrology',
     date: 'Mach 03, 2023',
     author: 'Ayanika Das',
@@ -1072,6 +1062,87 @@ export const articlesArray: ArticleData[] = [
   </p>
 </div>`,
   },
+  {
+    id: 10,
+    inSidebar: 'no',
+    alt: 'article 10',
+    imageUrl: '/public/images/b12_70d30ad7-cd54-43bc-8550-37790c3cf87c_600x.webp',
+    category: 'Fashion',
+    date: 'Oct 27, 2023',
+    author: 'Elle Turner',
+    title: 'Dark Velvet Hair Is The Winter Colour you Need To Try',
+    description:
+      'While food and drinks have headlined the major beauty trends recently (latte makeup, strawberry girl, mocha nails), textures are taking us...?',
+    full: ` <div>
+  <p>
+    While food and drinks have headlined the major beauty trends
+    recently (latte makeup, strawberry girl, mocha nails), textures are
+    taking us into winter. And dark velvet hair is here to pick up where
+    latte left off. We already saw cashmere blonde pick up a fan base
+    last year, but for 2023 velvet is most definitely ruling the beauty
+    trends.
+  </p>
+  <p>
+    Velvet makeup has picked up a fan base that includes Selena Gomez,
+    Tina Kunakey and Rosie Huntington-Whiteley. And velvet nails is
+    limbering up to topple glazed donut nails from the top spot after a
+    year plus in first place. The mani trades a chrome sheen for a soft
+    sparkle, plus it offers extra nuzzly dimension that feels sumptuous,
+    luxurious and perfect for the colder seasons.
+  </p>
+  <p>
+    The same goes for our hair colours. With the sun setting earlier and
+    less daylight to enjoy, we are embracing the natural shift to
+    moodier hues, like mocha, cherry cola and red velvet. In fact, we're
+    loving black velvet and navy velvet for that matter, too. For
+    autumn-winter, we're seeing lots of hair shades come through that
+    are classic velvet shades. And you can play them up with the finish
+    of your hair, too. Semi-matte strands pair perfectly in contrast to
+    the ultra glossy, liquid shine we've been seeing lots of, so
+    mattifying hairsprays and texturisers can add extra semi-soft
+    dimension.
+  </p>
+  <h2>Dark velvet red</h2>
+  <p>
+    We didn't think red hair could get any hotter but for winter, dark
+    red velvet hair is showing us otherwise. Like most hair colours,
+    there is a seasonal shift for ginger strands: “The natural
+    progression goes from soft coppers into stronger coppers [for the
+    autumn]; then into punchier reds [for winter] — and we are already
+    seeing this clear direction,” says trend forecaster and top London
+    hair stylist, Tom Smith. So, we’re seeing richer velvet reds,
+    instead of the ambery coppers of earlier seasons.
+  </p>
+  <p>
+    If you aren’t a natural redhead and are thinking ahead to the
+    grow-out phase, worry not. LA hair stylist, Dhairius Thomas, says
+    that this colour will look even more eye-catching with time,
+    especially if you have dark brown roots as it’ll create an edgy
+    black to red ombré look.
+  </p>
+  <div style='display: flex; justify-content: center '>
+    <img style='max-height: 300px'
+      src="https://i.pinimg.com/736x/32/f8/20/32f82092f1a03f9bb951e8eaeb621e9c.jpg"
+      alt="hair"
+    />
+    <img style='max-height: 300px'
+      src="https://media.allure.com/photos/652ffc0f160be50d03a046b2/master/w_1600%2Cc_limit/darkredhair.png"
+      alt="hair"
+    />
+    <img style='max-height: 300px'
+      src="https://i1.wp.com/www.hadviser.com/wp-content/uploads/2022/07/22-dark-ginger-hair-color-CZzeQXTOKBS.jpg?resize=1037%2C1319&ssl=1"
+      alt="hair"
+    />
+  </div>
+  <h2>Black velvet</h2>
+  <p>
+    Ultra dark brunettes and midnight black make a rich, striking
+    statement while still feeling classic and wearable. We’ve noticed
+    celebs skipping licks of honey and caramel highlights for a moodier,
+    cooler palette that’s a little flatter and less dimensional, but
+    it’s luxe and intentional.
+  </p>
+</div>`,
+  },
  
 ];
-

@@ -24,7 +24,7 @@ const HeaderMenu = (props: Props) => {
                         padding: '0px 15px',
                     }}
                     icon={<MenuIcon />}
-                    onClick={toggleDrawer(true)}
+                    onClick={toggleDrawer(false)}
                 />
 
                 <Tab
@@ -39,28 +39,28 @@ const HeaderMenu = (props: Props) => {
                         padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    label="Fashion"
+                    label="Beauty"
                 />
                 <Tab
                     sx={{
                         padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    label="Health"
+                    label="Cosmetics"
                 />
                 <Tab
                     sx={{
                         padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    label="Astrology"
+                    label="Cream"
                 />
                 <Tab
                     sx={{
                         padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    label="Psychology"
+                    label="Hair care"
                 />
                 <Tab
                     sx={{

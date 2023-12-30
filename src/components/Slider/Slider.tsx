@@ -1,7 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel'
 import bg1 from '../../assets/img/slider-1.webp'
 import bg2 from '../../assets/img/slider-2.webp'
-import bg3 from '../../assets/img/slideshow_3.webp'
+import bg3 from '../../assets/img/slider-3.webp'
+
 import './Slider.scss'
 import Container from '@mui/material/Container'
 
