@@ -45,10 +45,10 @@ const HomeArticleItem = ({
         >
             <img className={classes.image} src={imageUrl} alt={alt} />
             <span className={classes.category}>{category}</span>
-            <a className={classes.title} href="#">
+            <div className={classes.title}>
                 {' '}
                 {title}
-            </a>
+            </div>
             <Box
                 sx={{
                     display: 'flex',
@@ -75,10 +75,10 @@ const HomeArticleItem = ({
                     alignItems: 'center',
                 }}
             >
-                <a className={classes.readMore} href="#">
+                <div className={classes.readMore}>
                     {' '}
                     Read more
-                </a>
+                </div>
                 <LikeButton
                     key={id}
                     isLiked={isLiked}
