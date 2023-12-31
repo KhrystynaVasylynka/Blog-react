@@ -1,12 +1,19 @@
 .activeLink {
-  color: #1976d2;
+  color:white;
   font-size: 20px;
-  text-shadow: 1px 2px 4px rgb(169, 156, 216);
+  text-shadow: 1px 2px 4px brown;
 }
-.menuItem {
-  transition: text-shadow 0.4s ease-out;
+.items {
+  padding: 0 15px;
+  color: brown;
+  transition: transform 0.4s ease-out, color 0.3s ease, text-shadow 0.2s ease-out;
   &:hover,
   &:focus {
-    text-shadow: 1px -1px 5px rgba(25, 118, 210, 0.5);
+    color: white;
+    text-shadow: 3px 3px 3px brown;
+    transform: scale(1.3,1.3);
   }
+}
+.items span {
+  color: brown;
 }

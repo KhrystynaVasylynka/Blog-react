@@ -14,32 +14,20 @@ const Slider = (props: Props) => {
                 <img src={bg1} alt="style-3" className="carousel-img" />
                 <Container>
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>
-                            Nulla vitae elit libero, a pharetra augue mollis
-                            interdum.
-                        </p>
+                        <h3>BEST SELLERS</h3> 
                     </Carousel.Caption>
                 </Container>
             </Carousel.Item>
             <Carousel.Item>
                 <img src={bg2} alt="style-1" className="carousel-img" />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                    </p>
+                    <h3>NEWS</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img src={bg3} alt="style-1" className="carousel-img" />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                    </p>
+                    <h3>TYPES OF MAKEUP AND TIPS</h3>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
