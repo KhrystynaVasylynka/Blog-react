@@ -1,6 +1,8 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
 import { articlesArray } from 'utils/articlesArray'
 import HomeArticleItem from './HomeArticleItem'
+import Sidebar from 'components/sidebar/Sidebar'
+import { useState } from 'react'
 
 type Props = {
     likeState: {
@@ -84,6 +86,24 @@ const HomeArticles = ({
                                 />
                             )
                         )}
+                    </Box>
+                </Grid>
+
+                <Grid item xs={12} md={4}>
+                    <Box
+                        sx={{
+                            display: { xs: 'none', lg: 'initial' },
+                        }}
+                    >
+                        <Sidebar
+                            likeState={likeState}
+                            changeLikeArticle={changeLikeArticle}
+                            articles={articlesArray.filter(
+                                (item) => item.inSidebar === 'yes'
+                            )}
+                            updateLikedState={updateLikedState}
+                            likedCount={likedCount}
+                        />
                     </Box>
                 </Grid>
             </Grid>

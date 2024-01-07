@@ -1,0 +1,32 @@
+.title {
+  display: block;
+  padding-top: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+
+  @media (max-width: 599px) {
+    font-size: 22px;
+    line-height: 1.1;
+  }
+
+  &:hover,
+  &:focus {
+    color: #053e77;
+    text-decoration: underline;
+  }
+}
+.readMore {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  color: #333;
+  &:hover,
+  &:focus {
+    color: #000;
+    cursor: pointer;
+  }
+}

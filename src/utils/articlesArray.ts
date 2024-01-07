@@ -8,11 +8,13 @@ export type HomeArticleItemType = {
   title: string;
   description: string;
   full?: string;
+  inSidebar: string;
 };
 
 export const articlesArray: HomeArticleItemType[] = [
   {
     id: 1,
+    inSidebar: 'no',
     alt: 'article 1',
     imageUrl: '/images/b1_105928f8-73d2-4eb3-a3bc-0662a0138bc1_600x.webp',
     category: 'Cosmetics',
@@ -37,6 +39,7 @@ export const articlesArray: HomeArticleItemType[] = [
   },
   {
     id: 2,
+    inSidebar: 'no',
     alt: 'article 2',
     imageUrl: '/images/b2_600x.webp',
     category: 'Beauty',
@@ -64,6 +67,7 @@ export const articlesArray: HomeArticleItemType[] = [
   },
   {
     id: 3,
+    inSidebar: 'no',
     alt: 'article 3',
     imageUrl: '/images/b3_600x.webp',
     category: 'Hair care',
@@ -87,6 +91,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 4,
+    inSidebar: 'yes',
     alt: 'article 4',
     imageUrl: '/images/b4_600x.webp',
     category: 'Hair care',
@@ -111,6 +116,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 5,
+    inSidebar: 'yes',
     alt: 'article 5',
     imageUrl: '/images/b5_600x.webp',
     category: 'Beauty',
@@ -135,6 +141,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 6,
+    inSidebar: 'no',
     alt: 'article 6',
     imageUrl: '/images/b6_600x.webp',
     category: 'Cosmetics',
@@ -159,6 +166,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 7,
+    inSidebar: 'yes',
     alt: 'article 7',
     imageUrl: '/images/b7_600x.webp',
     category: 'Cream',
@@ -183,6 +191,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 8,
+    inSidebar: 'no',
     alt: 'article 8',
     imageUrl: '/images/b8_600x.webp',
     category: 'Cosmetics',
@@ -207,6 +216,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 9,
+    inSidebar: 'no',
     alt: 'article 9',
     imageUrl: '/images/b9_600x.webp',
     category: 'Beauty',
@@ -231,6 +241,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 10,
+    inSidebar: 'yes',
     alt: 'article 10',
     imageUrl: '/images/b12_70d30ad7-cd54-43bc-8550-37790c3cf87c_600x.webp',
     category: 'Hair care',
