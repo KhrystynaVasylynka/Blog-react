@@ -1,8 +1,7 @@
 import Box from '@mui/material/Box'
 import HomeArticle from '../article/HomeArticleItem'
-import { NavLink } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
-import { Tab, Typography, List, ListItem } from '@mui/material'
+import { Typography, List, ListItem } from '@mui/material'
+import Tags from 'components/Tags/Tags'
 
 type HomeArticleItemType = {
     id: number
@@ -33,12 +32,7 @@ const Sidebar = ({
     updateLikedState,
     likedCount,
 }: Props) => {
-    const navigate = useNavigate()
-
-    const handleTabClick = (path: string) => {
-        navigate(path)
-        window.scrollTo(0, 0)
-    }
+   
     return (
         <Box
             sx={{
@@ -89,70 +83,7 @@ const Sidebar = ({
                         </ListItem>
                     ))}
             </List>
-            <Typography
-                variant="h3"
-                sx={{
-                    margin: '0 auto',
-                    backgroundColor: 'rgba( 160, 82, 45,0.8)',
-                    height: '50px',
-                    width: '100%',
-                    fontSize: '20px',
-                    fontWeight: 'bold',
-                    marginTop: '0px',
-                    textAlign: 'center',
-                    color: '#fff',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}
-            >
-                Tags
-            </Typography>
-            <Tab
-                sx={{
-                    color: 'brown',
-                    maxWidth:'none',
-                    display: { xs: 'none', lg: 'flex' },
-                }}
-                label="Beauty"
-                component={NavLink}
-                to="/beauty"
-                onClick={() => handleTabClick('/beauty')}
-            />
-            <Tab
-                sx={{
-                    color: 'brown',
-                    maxWidth:'none',
-                    display: { xs: 'none', lg: 'flex' },
-                }}
-                label="Cosmetics"
-                component={NavLink}
-                to="/cosmetics"
-                onClick={() => handleTabClick('/cosmetics')}
-            />
-            <Tab
-                sx={{
-                    color: 'brown',
-                    maxWidth:'none',
-                    display: { xs: 'none', lg: 'flex' },
-                }}
-                label="Cream"
-                component={NavLink}
-                to="/cream"
-                onClick={() => handleTabClick('/cream')}
-            />
-            <Tab
-                sx={{
-                    color: 'brown',
-                    maxWidth:'none',
-                    display: { xs: 'none', lg: 'flex' },
-                }}
-                label="Hair care"
-                component={NavLink}
-                to="/hair care"
-                onClick={() => handleTabClick('/hair care')}
-                />
-          
+          <Tags/>
         </Box>
     )
 }

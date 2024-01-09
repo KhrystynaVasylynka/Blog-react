@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom'
 import CategoryPage from 'pages/CategoryPage/CategoryPage'
 import ArticlePage from 'pages/ArticlePage/ArticlePage'
 import FavoritesPage from 'pages/FavoritesPage/FavoritesPage'
+import Footer from './Footer/Footer'
 
 type Props = {}
 
@@ -142,6 +143,7 @@ const App = (props: Props) => {
                     }
                 ></Route>
             </Routes>
+            <Footer/>
         </StyledEngineProvider>
     )
 }

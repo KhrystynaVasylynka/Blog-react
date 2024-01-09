@@ -11,9 +11,8 @@ import {
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import MenuIcon from '@mui/icons-material/Menu'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import classes from './Header.module.scss'
-import { useNavigate } from 'react-router-dom'
 
 type Props = {
     hasLikedArticles: boolean
@@ -21,16 +20,12 @@ type Props = {
 }
 
 const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
-    const location = useLocation()
-
     const [isDrawerOpen, setDrawerOpen] = useState<boolean>(false)
     const toggleDrawer = (open: boolean) => () => {
         setDrawerOpen(open)
     }
-    const navigate = useNavigate()
 
     const handleTabClick = (path: string) => {
-        navigate(path)
         window.scrollTo(0, 0)
     }
 
@@ -45,7 +40,6 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                     icon={<MenuIcon />}
                     onClick={toggleDrawer(true)}
                 />
-
                 <Tab
                     sx={{
                         padding: '0px 15px',
@@ -54,9 +48,7 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                     label="Home"
                     component={NavLink}
                     to="/"
-                    className={`${classes.items} ${
-                        location.pathname === '/' ? classes.activeLink : ''
-                    }`}
+                    className={classes.items}
                     onClick={() => handleTabClick('/')}
                 />
                 <Tab
@@ -67,11 +59,7 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                     label="Beauty"
                     component={NavLink}
                     to="/beauty"
-                    className={`${classes.items} ${
-                        location.pathname === '/beauty'
-                            ? classes.activeLink
-                            : ''
-                    }`}
+                    className={classes.items}
                     onClick={() => handleTabClick('/beauty')}
                 />
                 <Tab
@@ -82,11 +70,7 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                     label="Cosmetics"
                     component={NavLink}
                     to="/cosmetics"
-                    className={`${classes.items} ${
-                        location.pathname === '/cosmetics'
-                            ? classes.activeLink
-                            : ''
-                    }`}
+                    className={classes.items}
                     onClick={() => handleTabClick('/cosmetics')}
                 />
                 <Tab
@@ -97,9 +81,7 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                     label="Cream"
                     component={NavLink}
                     to="/cream"
-                    className={`${classes.items} ${
-                        location.pathname === '/cream' ? classes.activeLink : ''
-                    }`}
+                    className={classes.items}
                     onClick={() => handleTabClick('/cream')}
                 />
                 <Tab
@@ -110,11 +92,7 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                     label="Hair care"
                     component={NavLink}
                     to="/hair care"
-                    className={`${classes.items} ${
-                        location.pathname === '/hair care'
-                            ? classes.activeLink
-                            : ''
-                    }`}
+                    className={classes.items}
                     onClick={() => handleTabClick('/hair care')}
                 />
                 <Tab
