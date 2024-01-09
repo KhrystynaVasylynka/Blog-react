@@ -1,5 +1,6 @@
 import classes from './HomeArticle.module.scss'
 import { Box, Typography } from '@mui/material'
+import { Link } from 'react-router-dom';
 import LikeButton from 'components/likeButton/LikeButton'
 
 type HomeArticleItemType = {
@@ -31,6 +32,9 @@ const HomeArticleItem = ({
     updateLikedState,
     likedCount,
 }: HomeArticleItemType) => {
+    const handleLinkClick = () => {
+      window.scrollTo(0, 0);
+    };
     return (
         <Box
             sx={{
@@ -44,11 +48,18 @@ const HomeArticleItem = ({
             }}
         >
             <img className={classes.image} src={imageUrl} alt={alt} />
-            <span className={classes.category}>{category}</span>
-            <div className={classes.title}>
-                {' '}
+            <span className={`${classes.category}`}>
+        {category}
+      </span>
+      <Link
+        to={`/${category.toLowerCase()}/${title
+          .toLowerCase()
+          .replace(/ /g, '-')}`}
+        className={classes.title}
+        onClick={handleLinkClick}
+      >
                 {title}
-            </div>
+          </Link>
             <Box
                 sx={{
                     display: 'flex',
@@ -75,10 +86,13 @@ const HomeArticleItem = ({
                     alignItems: 'center',
                 }}
             >
-                <div className={classes.readMore}>
-                    {' '}
-                    Read more
-                </div>
+                <Link
+        to={`/${category}/${title.toLowerCase().replace(/ /g, '-')}`}
+        className={classes.readMore}
+        onClick={handleLinkClick}
+      >
+        Read more
+      </Link>
                 <LikeButton
                     key={id}
                     isLiked={isLiked}

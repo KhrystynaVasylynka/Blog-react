@@ -1,14 +1,13 @@
-.activeLink {
-  color:white;
-  font-size: 20px;
-}
+
 .items {
+  font-size: 16px;
   padding: 0 15px;
-  color: brown;
-  transition: transform 0.4s ease-out;
+  color:rgba( 160, 82, 45,0.8);
+  transition: transform 0.4s ease-in;
   &:hover,
   &:focus {
-    transform: scale(1.3,1.3);
+   text-shadow: 2px 3px 5px rosybrown;
+    transform: scale(1.3, 1.3);
   }
 }
 .items span {

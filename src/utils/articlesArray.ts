@@ -116,7 +116,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 5,
-    inSidebar: 'yes',
+    inSidebar: 'no',
     alt: 'article 5',
     imageUrl: '/images/b5_600x.webp',
     category: 'Beauty',
@@ -141,7 +141,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 6,
-    inSidebar: 'no',
+    inSidebar: 'yes',
     alt: 'article 6',
     imageUrl: '/images/b6_600x.webp',
     category: 'Cosmetics',
@@ -241,7 +241,7 @@ Massa vitae tortor condimentum lacinia quis vel eros donec ac. Enim ut tellus el
   },
   {
     id: 10,
-    inSidebar: 'yes',
+    inSidebar: 'no',
     alt: 'article 10',
     imageUrl: '/images/b12_70d30ad7-cd54-43bc-8550-37790c3cf87c_600x.webp',
     category: 'Hair care',

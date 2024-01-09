@@ -11,8 +11,9 @@ import {
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import MenuIcon from '@mui/icons-material/Menu'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import classes from './Header.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {
     hasLikedArticles: boolean
@@ -20,9 +21,17 @@ type Props = {
 }
 
 const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
+    const location = useLocation()
+
     const [isDrawerOpen, setDrawerOpen] = useState<boolean>(false)
     const toggleDrawer = (open: boolean) => () => {
         setDrawerOpen(open)
+    }
+    const navigate = useNavigate()
+
+    const handleTabClick = (path: string) => {
+        navigate(path)
+        window.scrollTo(0, 0)
     }
 
     return (
@@ -31,51 +40,88 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                 <Tab
                     sx={{
                         display: { xs: 'block', lg: 'none' },
+                        padding: '0px 15px',
                     }}
                     icon={<MenuIcon />}
-                    onClick={toggleDrawer(false)}
+                    onClick={toggleDrawer(true)}
                 />
 
                 <Tab
                     sx={{
+                        padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    className={classes.items}
                     label="Home"
+                    component={NavLink}
+                    to="/"
+                    className={`${classes.items} ${
+                        location.pathname === '/' ? classes.activeLink : ''
+                    }`}
+                    onClick={() => handleTabClick('/')}
                 />
                 <Tab
                     sx={{
+                        padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    className={classes.items}
                     label="Beauty"
+                    component={NavLink}
+                    to="/beauty"
+                    className={`${classes.items} ${
+                        location.pathname === '/beauty'
+                            ? classes.activeLink
+                            : ''
+                    }`}
+                    onClick={() => handleTabClick('/beauty')}
                 />
                 <Tab
                     sx={{
+                        padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    className={classes.items}
                     label="Cosmetics"
+                    component={NavLink}
+                    to="/cosmetics"
+                    className={`${classes.items} ${
+                        location.pathname === '/cosmetics'
+                            ? classes.activeLink
+                            : ''
+                    }`}
+                    onClick={() => handleTabClick('/cosmetics')}
                 />
                 <Tab
                     sx={{
+                        padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    className={classes.items}
                     label="Cream"
+                    component={NavLink}
+                    to="/cream"
+                    className={`${classes.items} ${
+                        location.pathname === '/cream' ? classes.activeLink : ''
+                    }`}
+                    onClick={() => handleTabClick('/cream')}
                 />
                 <Tab
                     sx={{
+                        padding: '0px 15px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    className={classes.items}
                     label="Hair care"
+                    component={NavLink}
+                    to="/hair care"
+                    className={`${classes.items} ${
+                        location.pathname === '/hair care'
+                            ? classes.activeLink
+                            : ''
+                    }`}
+                    onClick={() => handleTabClick('/hair care')}
                 />
                 <Tab
                     sx={{
+                        padding: '0px 15px 5px 35px',
                         display: { xs: 'none', lg: 'flex' },
                     }}
-                    className={classes.items}
                     label="Favorites"
                     icon={
                         hasLikedArticles ? (
@@ -96,6 +142,10 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                         )
                     }
                     iconPosition="end"
+                    component={NavLink}
+                    to="/favorites"
+                    className={classes.items}
+                    onClick={() => handleTabClick('/favorites')}
                 />
             </Tabs>
 
@@ -105,37 +155,40 @@ const HeaderMenu = ({ hasLikedArticles, likedCount }: Props) => {
                 onClose={toggleDrawer(false)}
             >
                 <List>
-                    <ListItem>
-                        Home
-                        <ListItemText />
+                    <ListItem
+                        component={NavLink}
+                        to="/"
+                        onClick={toggleDrawer(false)}
+                    >
+                        <ListItemText primary="Home" />
                     </ListItem>
                     <ListItem
                         component={NavLink}
-                        to="/fashion"
+                        to="/beauty"
                         onClick={toggleDrawer(false)}
                     >
-                        <ListItemText primary="Fashion" />
+                        <ListItemText primary="Beauty" />
                     </ListItem>
                     <ListItem
                         component={NavLink}
-                        to="/health"
+                        to="/cosmetics"
                         onClick={toggleDrawer(false)}
                     >
-                        <ListItemText primary="Health" />
+                        <ListItemText primary="Cosmetics" />
                     </ListItem>
                     <ListItem
                         component={NavLink}
-                        to="/astrology"
+                        to="/cream"
                         onClick={toggleDrawer(false)}
                     >
-                        <ListItemText primary="Astrology" />
+                        <ListItemText primary="Cream" />
                     </ListItem>
                     <ListItem
                         component={NavLink}
-                        to="/psychology"
+                        to="/hair care"
                         onClick={toggleDrawer(false)}
                     >
-                        <ListItemText primary="Psychology" />
+                        <ListItemText primary="Hair care" />
                     </ListItem>
                     <ListItem
                         component={NavLink}
