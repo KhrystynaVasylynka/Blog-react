@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import {articlesArray} from 'utils/articlesArray';

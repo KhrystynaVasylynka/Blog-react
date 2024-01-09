@@ -1,7 +1,5 @@
 import { Box, Container, Typography } from '@mui/material'
-import React from 'react'
 import { articlesArray } from 'utils/articlesArray'
-import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied'
 import Sidebar from 'components/sidebar/Sidebar'
 import LikeButton from 'components/likeButton/LikeButton'
 import { Link } from 'react-router-dom'
