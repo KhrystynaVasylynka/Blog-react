@@ -1,36 +1,24 @@
-import { Box, Container, Link} from '@mui/material'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import YouTubeIcon from '@mui/icons-material/YouTube'
+import { Box, Container } from '@mui/material'
 import Logo from 'components/Logo/Logo'
+import Social from 'components/Social/Social'
+import Subscribe from 'components/Subscribe/Subscribe'
 
 type Props = {}
 
 const Footer = (props: Props) => {
-    const iconStyles = {
-        cursor: 'pointer',
-        marginRight: '30px',
-        color: 'brown',
-        '&:hover, &:focus': {
-            color: 'red',
-        },
-    }
-
     return (
         <Box
             sx={{
-                background: 'white',
-                padding: '10px',
+                paddingBottom: '20px',
                 boxShadow: '0px 0px 8px 1px rgba(0,0,0,0.5)',
-                backgroundColor: 'rgba(255, 218, 185,0.5)',
+                backgroundColor: 'rgba(255, 218, 185,0.3)',
             }}
         >
             <Container>
                 <Box
                     sx={{
-                        display: 'flex',
-                        alignItems: 'center',
+                        display: { lg: 'flex' },
+                        alignItems: 'end',
                         justifyContent: 'space-between',
                     }}
                 >
@@ -50,44 +38,10 @@ const Footer = (props: Props) => {
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            alignItems: 'center',
                         }}
                     >
-                        <Box>
-                            <Link
-                                href="https://www.facebook.com/help/188157731232424"
-                                target="_blank"
-                                sx={iconStyles}
-                            >
-                                <FacebookIcon />
-                            </Link>
-                            <Link
-                                href="https://www.facebook.com/help/instagram/155940534568753"
-                                target="_blank"
-                                sx={iconStyles}
-                            >
-                                <InstagramIcon />
-                            </Link>
-                            <Link
-                                href="https://twitter.com/?lang=ru"
-                                target="_blank"
-                                sx={iconStyles}
-                            >
-                                <TwitterIcon />
-                            </Link>
-                            <Link
-                                href="https://www.youtube.com/"
-                                target="_blank"
-                                sx={{
-                                    ...iconStyles,
-                                    '&:last-child': {
-                                        marginRight: 0,
-                                    },
-                                }}
-                            >
-                                <YouTubeIcon />
-                            </Link>
-                        </Box>
+                        <Subscribe />
+                        <Social />
                     </Box>
                 </Box>
             </Container>

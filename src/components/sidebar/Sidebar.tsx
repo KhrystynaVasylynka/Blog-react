@@ -32,13 +32,11 @@ const Sidebar = ({
     updateLikedState,
     likedCount,
 }: Props) => {
-   
     return (
         <Box
             sx={{
-                paddingTop: '20px',
                 backgroundColor: 'rgba(255, 218, 185,0.3)',
-                borderLeft: ' 2px solid brown',
+                borderLeft: ' 1px solid brown',
             }}
         >
             <Typography
@@ -83,7 +81,7 @@ const Sidebar = ({
                         </ListItem>
                     ))}
             </List>
-          <Tags/>
+            <Tags />
         </Box>
     )
 }

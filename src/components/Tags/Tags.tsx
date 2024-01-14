@@ -18,7 +18,6 @@ const Tags = (props: Props) => {
                     width: '100%',
                     fontSize: '20px',
                     fontWeight: 'bold',
-                    marginTop: '0px',
                     textAlign: 'center',
                     color: '#fff',
                     display: 'flex',
@@ -66,6 +65,7 @@ const Tags = (props: Props) => {
                     color: 'brown',
                     maxWidth: 'none',
                     display: { xs: 'none', lg: 'flex' },
+                    marginBottom: '20px',
                 }}
                 label="Hair care"
                 component={NavLink}

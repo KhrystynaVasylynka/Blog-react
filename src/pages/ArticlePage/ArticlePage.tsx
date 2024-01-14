@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 import LikeButton from 'components/likeButton/LikeButton'
-import Sidebar from 'components/sidebar/Sidebar'
+import Sidebar from 'components/Sidebar/Sidebar'
 import { useParams } from 'react-router-dom'
 import { articlesArray } from 'utils/articlesArray'
 

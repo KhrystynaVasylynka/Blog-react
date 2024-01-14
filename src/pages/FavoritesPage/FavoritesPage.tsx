@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 import { articlesArray } from 'utils/articlesArray'
-import Sidebar from 'components/sidebar/Sidebar'
+import Sidebar from 'components/Sidebar/Sidebar'
 import LikeButton from 'components/likeButton/LikeButton'
 import { Link } from 'react-router-dom'
 import classes from './FavoritesPage.module.scss'
@@ -85,24 +85,32 @@ const FavoritesPage = ({
                                                 {article.title}
                                             </Link>
                                         </Typography>
-                                        <div style={{ display:'flex',justifyContent:'space-between',}}>
-                                        <Typography
-                                            sx={{
-                                                fontSize: '18px',
-                                                margin: '10px 0',
-                                                color:'gray',
+                                        <div
+                                            style={{
+                                                display: 'flex',
+                                                justifyContent: 'space-between',
                                             }}
                                         >
-                                            {article.date} | {article.author}
-                                        </Typography>
-                                        <LikeButton
-                                            isLiked={likeState[article.id]}
-                                            id={article.id}
-                                            changeLikeArticle={
-                                                changeLikeArticle
-                                            }
-                                            updateLikedState={updateLikedState}
-                                            likedCount={likedCount}
+                                            <Typography
+                                                sx={{
+                                                    fontSize: '18px',
+                                                    margin: '10px 0',
+                                                    color: 'gray',
+                                                }}
+                                            >
+                                                {article.date} |{' '}
+                                                {article.author}
+                                            </Typography>
+                                            <LikeButton
+                                                isLiked={likeState[article.id]}
+                                                id={article.id}
+                                                changeLikeArticle={
+                                                    changeLikeArticle
+                                                }
+                                                updateLikedState={
+                                                    updateLikedState
+                                                }
+                                                likedCount={likedCount}
                                             />
                                         </div>
                                         <Typography>
@@ -135,12 +143,11 @@ const FavoritesPage = ({
                         sx={{
                             display: 'inline-block',
                             fontSize: '26px',
-                                minHeight: '90vh',
+                            minHeight: '90vh',
                         }}
                     >
                         There are no articles here yet
                     </Typography>
-                   
                 </Box>
             )}
         </Container>
