@@ -1,13 +1,13 @@
 import { Box, Container, Typography } from '@mui/material'
 import LikeButton from 'components/likeButton/LikeButton'
 import Review from 'components/Reviews/Review'
-import Sidebar from 'components/Sidebar/Sidebar'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 import { articlesArray } from 'utils/articlesArray'
 import { reviewsArray } from 'utils/reviewsArray'
 import ava0 from '../../assets/img/ava0.webp'
 import Form from 'components/Form/Form'
+import Sidebar from 'components/Sidebar/Sidebar'
 
 type HomeArticleItemType = {
     id: number
@@ -79,7 +79,7 @@ const ArticlePage = ({
             sx={{
                 paddingTop: '60px',
                 display: 'flex',
-                justifyContent: { xs: 'center', lg: 'space-between' },
+                justifyContent: { xs: 'flex-center', lg: 'space-between' },
             }}
         >
             <Box
