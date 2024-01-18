@@ -1,8 +1,13 @@
 import { Box, Container, Typography } from '@mui/material'
 import LikeButton from 'components/likeButton/LikeButton'
+import Review from 'components/Reviews/Review'
 import Sidebar from 'components/Sidebar/Sidebar'
 import { useParams } from 'react-router-dom'
+import { useState } from 'react'
 import { articlesArray } from 'utils/articlesArray'
+import { reviewsArray } from 'utils/reviewsArray'
+import ava0 from '../../assets/img/ava0.webp'
+import Form from 'components/Form/Form'
 
 type HomeArticleItemType = {
     id: number
@@ -26,6 +31,12 @@ type ArticlePageProps = {
     likedCount: number
     isLiked: boolean
 }
+type CommentData = {
+    fullName: string
+    email: string
+    comment: string
+    image?: string
+}
 
 const ArticlePage = ({
     likeState,
@@ -33,6 +44,20 @@ const ArticlePage = ({
     updateLikedState,
     likedCount,
 }: ArticlePageProps) => {
+    const initialComments: CommentData[] = reviewsArray.map((review) => ({
+        fullName: review.fullname,
+        image: review.img,
+        email: '',
+        comment: review.text,
+    }))
+
+    const [allComments, setAllComments] =
+        useState<CommentData[]>(initialComments)
+
+    const addComment = (comment: CommentData) => {
+        setAllComments((prevComments) => [...prevComments, comment])
+    }
+
     const { title } = useParams<{ title: string | undefined }>()
 
     if (!title) {
@@ -57,7 +82,11 @@ const ArticlePage = ({
                 justifyContent: { xs: 'center', lg: 'space-between' },
             }}
         >
-            <Box sx={{ maxWidth: '700px' }}>
+            <Box
+                sx={{
+                    maxWidth: '700px',
+                }}
+            >
                 <Typography
                     variant="h2"
                     component={'h3'}
@@ -119,8 +148,19 @@ const ArticlePage = ({
                         ></div>
                     </Typography>
                 )}
-            </Box>
 
+                <Box>
+                    {allComments.map((comment, index) => (
+                        <Review
+                            key={index}
+                            userFullName={comment.fullName}
+                            userImg={comment.image || ava0}
+                            commentText={comment.comment}
+                        />
+                    ))}
+                </Box>
+                <Form addComment={addComment} comments={allComments} />
+            </Box>
             <Box
                 sx={{
                     display: { xs: 'none', lg: 'initial' },

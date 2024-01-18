@@ -96,6 +96,7 @@ const CategoryPage = ({
                         <Typography>Articles are not found</Typography>
                     )}
                 </div>
+
                 <Box sx={{ display: { xs: 'none', lg: 'initial' } }}>
                     <Sidebar
                         likeState={likeState}
