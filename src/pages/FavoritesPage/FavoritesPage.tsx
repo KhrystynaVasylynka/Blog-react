@@ -1,9 +1,9 @@
 import { Box, Container, Typography } from '@mui/material'
 import { articlesArray } from 'utils/articlesArray'
-import Sidebar from 'components/Sidebar/Sidebar'
 import LikeButton from 'components/likeButton/LikeButton'
 import { Link } from 'react-router-dom'
 import classes from './FavoritesPage.module.scss'
+import Sidebar from 'components/Sidebar/Sidebar'
 
 type Props = {
     likeState: { [id: number]: boolean }

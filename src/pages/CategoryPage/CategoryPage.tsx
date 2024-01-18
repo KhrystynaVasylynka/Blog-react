@@ -1,8 +1,8 @@
 import { Container, Typography, Box } from '@mui/material'
 import { useParams } from 'react-router-dom'
 import { articlesArray } from 'utils/articlesArray'
-import Sidebar from 'components/Sidebar/Sidebar'
 import CategoryArticleItem from 'components/categoryArticleItem/categoryArticleItem'
+import Sidebar from 'components/Sidebar/Sidebar'
 
 type LikeState = {
     [id: number]: boolean
