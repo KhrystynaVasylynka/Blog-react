@@ -30,7 +30,7 @@ const FavoritesPage = ({
                     textAlign: 'center',
                     fontWeight: 'bold',
                     marginBottom: '20px',
-                    // color:'rgba( 160, 82, 45,0.8)',
+                    color:'brown',
                 }}
             >
                 Favorites

@@ -18,7 +18,7 @@ const Footer = (props: Props) => {
                 <Box
                     sx={{
                         display: { lg: 'flex' },
-                        alignItems: 'end',
+                        alignItems: 'flex-end',
                         justifyContent: 'space-between',
                     }}
                 >
