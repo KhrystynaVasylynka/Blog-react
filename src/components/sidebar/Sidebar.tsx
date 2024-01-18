@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box'
-import HomeArticle from '../article/HomeArticleItem'
 import { Typography, List, ListItem } from '@mui/material'
 import Tags from 'components/Tags/Tags'
+import HomeArticleItem from '../article/HomeArticleItem'
 
 type HomeArticleItemType = {
     id: number
@@ -63,7 +63,7 @@ const Sidebar = ({
                     .filter((item) => item.inSidebar === 'yes')
                     .map((item) => (
                         <ListItem key={item.id}>
-                            <HomeArticle
+                            <HomeArticleItem
                                 key={item.id}
                                 alt={item.alt}
                                 imageUrl={item.imageUrl}
