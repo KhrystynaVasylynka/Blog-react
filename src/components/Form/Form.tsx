@@ -105,7 +105,7 @@ const Form: React.FC<FormProps> = ({ addComment }) => {
                 padding: '20px',
             }}
         >
-            <Typography variant="h4" sx={{ marginBottom: 2, color: 'brown' }}>
+            <Typography variant="h5" sx={{ color: 'brown' }}>
                 Leave a comment
             </Typography>
             <form onSubmit={handleSubmit}>
@@ -119,7 +119,7 @@ const Form: React.FC<FormProps> = ({ addComment }) => {
                     onBlur={handleBlur('fullName')}
                     error={touched.fullName && errors.fullName.length > 0}
                     helperText={touched.fullName ? errors.fullName : ''}
-                    sx={{ backgroundColor: 'white' }}
+                    sx={{ backgroundColor: 'white', marginRight: '10px' }}
                 />
 
                 <TextField
@@ -141,7 +141,7 @@ const Form: React.FC<FormProps> = ({ addComment }) => {
                     variant="outlined"
                     fullWidth
                     multiline
-                    rows={4}
+                    rows={3}
                     margin="normal"
                     value={formData.comment}
                     onChange={handleChange('comment')}
