@@ -4,7 +4,6 @@ import { articlesArray } from 'utils/articlesArray'
 import CategoryArticleItem from 'components/categoryArticleItem/categoryArticleItem'
 import Sidebar from 'components/Sidebar/Sidebar'
 
-
 type LikeState = {
     [id: number]: boolean
 }
@@ -100,13 +99,13 @@ const CategoryPage = ({
 
                 <Box sx={{ display: { xs: 'none', lg: 'initial' } }}>
                     <Sidebar
-                      likeState={likeState}
-                      changeLikeArticle={changeLikeArticle}
-                      articles={articlesArray.filter(
-                          (item) => item.inSidebar === 'yes'
-                      )}
-                      updateLikedState={updateLikedState}
-                      likedCount={likedCount}
+                        likeState={likeState}
+                        changeLikeArticle={changeLikeArticle}
+                        articles={articlesArray.filter(
+                            (item) => item.inSidebar === 'yes'
+                        )}
+                        updateLikedState={updateLikedState}
+                        likedCount={likedCount}
                     />
                 </Box>
             </Box>
